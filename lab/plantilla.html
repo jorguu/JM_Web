@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab — Plantilla de pruebas</title>
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <!--
+    PLANTILLA DE PRUEBAS
+    1. Duplica este archivo dentro de la carpeta lab/ y ponle un nombre (ej. lab/mi-prueba.html).
+    2. Escribe tu experimento dentro de <main>.
+    3. Añádelo a la lista "lab" de content.js con enlace "lab/mi-prueba.html".
+    Abajo tienes las piezas básicas de la web para reutilizarlas.
+  -->
+  <header class="nav-wrap">
+    <div class="container">
+      <div class="nav">
+        <a class="nav__brand" href="../index.html#lab">
+          <span class="nav__logo" aria-hidden="true">JM</span>
+          <span>← Volver al Lab</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="section container">
+    <header class="section__head">
+      <h1 class="section__title">Plantilla de pruebas <span class="chip">Lab</span></h1>
+      <p class="section__intro">Duplica este archivo para empezar un experimento nuevo. Ya usa los colores, la tipografía y las piezas de la web.</p>
+    </header>
+
+    <div class="kit">
+      <div>
+        <p class="kit__label">Botones y enlaces</p>
+        <div class="kit__row">
+          <a class="btn btn--primary" href="#">Botón principal</a>
+          <button class="btn btn--secondary" type="button">Botón secundario</button>
+          <a class="link-arrow" href="#">Enlace naranja</a>
+        </div>
+      </div>
+
+      <div>
+        <p class="kit__label">Campo de texto</p>
+        <label class="field">
+          Tu email
+          <input type="email" name="email" autocomplete="email" placeholder="nombre@ejemplo.com">
+        </label>
+      </div>
+
+      <div>
+        <p class="kit__label">Tarjeta</p>
+        <article class="service">
+          <div class="service__top"><span>01</span><span class="chip">Etiqueta</span></div>
+          <h2 class="service__title">Título de tarjeta</h2>
+          <p class="service__desc">Texto secundario en gris. El blanco se reserva para títulos y datos importantes.</p>
+          <div class="service__bottom">
+            <p class="service__credit">Línea pequeña de crédito</p>
+          </div>
+        </article>
+      </div>
+
+      <div>
+        <p class="kit__label">Gráfico luminoso (necesita los cuadrados dentro)</p>
+        <div class="lattice" aria-hidden="true" style="max-width: 240px">
+          <span class="lattice__sq"></span><span class="lattice__sq"></span><span class="lattice__sq"></span>
+          <span class="lattice__sq"></span><span class="lattice__sq"></span><span class="lattice__sq"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Escribe aquí tu experimento -->
+  </main>
+</body>
+</html>

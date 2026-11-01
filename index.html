@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Título y descripción para buscadores y para la vista previa al compartir el
+       enlace (WhatsApp, LinkedIn…). Esas webs no ejecutan content.js, así que se
+       escriben aquí en español; al abrir la web se cambian al idioma elegido. -->
+  <title>Webs hechas con IA</title>
+  <meta name="description" content="Webs y herramientas digitales hechas con IA y revisadas a mano.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Webs hechas con IA">
+  <meta property="og:description" content="Webs y herramientas digitales hechas con IA y revisadas a mano.">
+  <!-- Cuando publiques la web, cambia "og-image.jpg" por la dirección completa,
+       por ejemplo "https://tu-dominio.com/og-image.jpg" -->
+  <meta property="og:image" content="og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script src="content.js" defer></script>
+  <script src="script.js" defer></script>
+  <!-- Sin JavaScript no se ocultaría nunca la página: esto la vuelve visible -->
+  <noscript><style>.is-loading { visibility: visible; }</style></noscript>
+</head>
+<!-- "is-loading" oculta la página hasta que script.js pone los textos,
+     para que no aparezca vacía un instante y luego "salte" -->
+<body class="is-loading">
+  <!-- Los textos NO se escriben aquí: salen de content.js -->
+
+  <div class="announce">
+    <p class="announce__inner container">
+      <span class="announce__text" id="announce-text"></span>
+      <a class="announce__link" id="announce-link" href="#"></a>
+    </p>
+  </div>
+
+  <header class="nav-wrap" id="nav">
+    <div class="container">
+      <div class="nav">
+        <a class="nav__brand" id="nav-home" href="#inicio">
+          <span class="nav__logo" id="nav-logo" aria-hidden="true"></span>
+          <span class="nav__name" id="nav-brand"></span>
+        </a>
+        <nav class="nav__menu" id="nav-menu">
+          <ul class="nav__list" id="nav-list"></ul>
+        </nav>
+        <div class="nav__actions">
+          <select class="lang" id="lang-select"></select>
+          <button class="nav__toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" id="inicio">
+      <div class="hero__copy">
+        <p class="chip reveal" id="hero-tagline"></p>
+        <h1 class="hero__title reveal" id="hero-title" style="--d: 1"></h1>
+        <p class="hero__lead reveal" id="hero-subtitle" style="--d: 2"></p>
+        <p class="hero__text reveal" id="hero-text" style="--d: 2"></p>
+        <div class="hero__actions reveal" style="--d: 3">
+          <a class="btn btn--primary" id="hero-primary" href="#"></a>
+          <a class="btn btn--secondary" id="hero-secondary" href="#"></a>
+        </div>
+        <p class="status reveal" id="hero-status" style="--d: 4"></p>
+      </div>
+      <div class="hero__art reveal" style="--d: 2">
+        <div class="lattice" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="section container" id="sobre-mi">
+      <div class="frame reveal">
+        <div class="frame__body">
+          <h2 class="section__title" id="intro-heading"></h2>
+          <p class="frame__text" id="intro-text"></p>
+        </div>
+        <div class="frame__art">
+          <div class="lattice" aria-hidden="true"></div>
+        </div>
+        <div class="frame__tabs">
+          <span class="frame__tabs-label" id="intro-tools-title"></span>
+          <ul class="tabs" id="intro-tools"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="proyectos">
+      <header class="section__head reveal">
+        <h2 class="section__title"><span id="projects-title"></span><span class="chip" id="projects-count"></span></h2>
+        <p class="section__intro" id="projects-intro"></p>
+      </header>
+      <ul class="projects" id="projects-list"></ul>
+    </section>
+
+    <section class="section container" id="servicios">
+      <header class="section__head reveal">
+        <h2 class="section__title"><span id="services-title"></span><span class="chip" id="services-count"></span></h2>
+        <p class="section__intro" id="services-intro"></p>
+      </header>
+      <div class="services" id="services-list"></div>
+      <div class="services__footer reveal">
+        <p class="services__note" id="services-note"></p>
+        <a class="btn btn--primary" id="services-cta" href="#contacto"></a>
+      </div>
+    </section>
+
+    <section class="section container" id="como-se-hace">
+      <header class="section__head reveal">
+        <h2 class="section__title" id="how-title"></h2>
+        <p class="section__intro" id="how-intro"></p>
+      </header>
+      <ol class="how" id="how-list"></ol>
+    </section>
+
+    <section class="section container" id="lab">
+      <header class="section__head reveal">
+        <h2 class="section__title"><span id="lab-title"></span><span class="chip" id="lab-count"></span></h2>
+        <p class="section__intro" id="lab-intro"></p>
+      </header>
+      <div class="lab-grid" id="lab-list"></div>
+    </section>
+
+    <section class="section container" id="contacto">
+      <div class="contact reveal">
+        <div class="contact__body">
+          <p class="chip" id="contact-label"></p>
+          <h2 class="contact__title" id="contact-title"></h2>
+          <p class="contact__text" id="contact-text"></p>
+          <div class="contact__row">
+            <a class="contact__email" id="contact-email" href="#"></a>
+            <button class="btn btn--secondary" id="contact-copy" type="button"></button>
+          </div>
+          <ul class="contact__socials" id="contact-socials"></ul>
+        </div>
+        <div class="contact__art">
+          <div class="lattice" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner container">
+      <p id="footer-copy"></p>
+      <p class="footer__legal" id="footer-legal"></p>
+      <p id="footer-credit"></p>
+    </div>
+  </footer>
+
+  <noscript><p class="noscript">Activa JavaScript · JavaScript aktivieren · Enable JavaScript</p></noscript>
+</body>
+</html>
